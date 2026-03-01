@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SK Transport Premium Logistics — Priority dispatch, GPS tracking, scheduled delivery windows, and multi-drop logistics for time-critical construction projects in Coimbatore.">
+    <title>Premium Logistics | SK Transport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/favicon.png">
+    <style>
+        .premium-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            overflow: hidden;
+            background: var(--bg);
+        }
+
+        .premium-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 70% at 50% 30%, rgba(251, 146, 60, .14) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 40% at 90% 80%, rgba(251, 146, 60, .07) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .premium-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 55px 55px;
+            mask-image: radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, .5), transparent 65%);
+            pointer-events: none;
+        }
+
+        .premium-hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .plan-card {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 40px 36px;
+            transition: var(--t);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card.featured {
+            border-color: var(--border-glow);
+            background: linear-gradient(135deg, var(--bg-3), var(--bg-2));
+        }
+
+        .plan-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--accent);
+            color: #0a0a0b;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            padding: 5px 44px;
+            transform: rotate(45deg);
+        }
+
+        .plan-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .plan-card.featured:hover {
+            box-shadow: 0 20px 60px rgba(251, 146, 60, .2);
+        }
+
+        .plan-name {
+            font-family: var(--ff-head);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-1);
+            margin-bottom: 8px;
+        }
+
+        .plan-tagline {
+            font-size: 0.88rem;
+            color: var(--text-3);
+            margin-bottom: 28px;
+        }
+
+        .plan-price {
+            font-family: var(--ff-head);
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .plan-price-note {
+            font-size: 0.8rem;
+            color: var(--text-3);
+            margin-bottom: 32px;
+        }
+
+        .plan-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 36px;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text-2);
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .plan-features li.disabled {
+            color: var(--text-3);
+        }
+
+        .plan-features li.disabled::before {
+            content: '–';
+            color: var(--text-3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ─── Header ──────────────────────────────────────── -->
+    <header id="main-header">
+        <div class="header-row">
+            <a href="index.html" class="logo">SK<span>Transport</span></a>
+            <nav id="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="premium.html" class="active">Premium</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-ctas">
+                <a href="tel:+919095954562" class="btn-call" aria-label="Call SK Transport">📞 90959 54562</a>
+                <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                            <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false"><div class="ham-lines"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ─── Premium Hero ─────────────────────────────────── -->
+        <section class="premium-hero">
+            <div class="container">
+                <div class="eyebrow" style="justify-content:center;">Premium Tier</div>
+                <h1 style="max-width:700px;margin:0 auto 24px;">Logistics You Can <em
+                        style="color:var(--accent);font-style:normal;">Count On</em></h1>
+                <p style="color:var(--text-2);font-size:1.15rem;max-width:560px;margin:0 auto 44px;">For time-critical
+                    pours, complex multi-drop schedules, and projects where every hour counts — Premium gives you full
+                    control.</p>
+                <div class="hero-actions" style="justify-content:center;">
+                    <a href="contact.html" class="btn btn-primary">Get Premium Quote</a>
+                    <a href="#plans" class="btn btn-outline">View Plans</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Premium Features ─────────────────────────────── -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="eyebrow">What You Get</div>
+                    <h2>Premium Features</h2>
+                    <p>Every Premium order comes with a dedicated set of logistics upgrades.</p>
+                </div>
+
+                <div class="icon-grid stagger-grid reveal">
+                    <div class="icon-card">
+                        <span class="icon">🚦</span>
+                        <h3>Priority Dispatch</h3>
+                        <p>Your orders jump the queue. Priority confirmation and faster turnaround for quotes and fleet
+                            allocation.</p>
+                    </div>
+                    <div class="icon-card">
+                        <span class="icon">🗓️</span>
+                        <h3>Scheduled Windows</h3>
+                        <p>Reserve a guaranteed delivery window — morning, afternoon or evening — so your crew knows
+                            exactly when to expect the load.</p>
+                    </div>
+                    <div class="icon-card">
+                        <span class="icon">📡</span>
+                        <h3>GPS Tracking & ETA</h3>
+                        <p>Live ETA updates and GPS tracking visibility so you can plan site operations with precision
+                            and no idle crew time.</p>
+                    </div>
+                    <div class="icon-card">
+                        <span class="icon">🔄</span>
+                        <h3>Multi-Drop Logistics</h3>
+                        <p>Coordinated deliveries across multiple sites in a single day, optimised for route efficiency
+                            and minimum wait times.</p>
+                    </div>
+                    <div class="icon-card">
+                        <span class="icon">📋</span>
+                        <h3>Delivery Reports</h3>
+                        <p>Receive a delivery confirmation summary after each run — useful for site records, billing and
+                            project tracking.</p>
+                    </div>
+                    <div class="icon-card">
+                        <span class="icon">☎️</span>
+                        <h3>Dedicated Contact</h3>
+                        <p>Direct dispatch line for Premium customers — skip the queue and speak to a coordinator
+                            immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Plans ────────────────────────────────────────── -->
+        <section id="plans" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="eyebrow">Pricing</div>
+                    <h2>Choose a Plan</h2>
+                    <p>Transparent pricing based on your project needs. All plans include lab-certified materials.</p>
+                </div>
+
+                <div class="plan-grid reveal">
+                    <!-- Standard -->
+                    <div class="plan-card">
+                        <div class="plan-name">Standard</div>
+                        <div class="plan-tagline">For occasional material orders</div>
+                        <div class="plan-price">Contact</div>
+                        <div class="plan-price-note">Custom pricing based on material & volume</div>
+                        <ul class="plan-features">
+                            <li>All 16+ materials available</li>
+                            <li>Coimbatore delivery coverage</li>
+                            <li>Quote within 2–4 hours</li>
+                            <li>Experienced certified drivers</li>
+                            <li class="disabled">Priority dispatch queue</li>
+                            <li class="disabled">Scheduled delivery windows</li>
+                            <li class="disabled">GPS/ETA tracking</li>
+                            <li class="disabled">Multi-drop logistics</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline" style="width:100%;">Request Quote</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="plan-card featured">
+                        <div class="plan-name">Premium</div>
+                        <div class="plan-tagline">For contractors and time-critical projects</div>
+                        <div class="plan-price">Contact</div>
+                        <div class="plan-price-note">Custom pricing — call for availability</div>
+                        <ul class="plan-features">
+                            <li>All 16+ materials available</li>
+                            <li>Extended regional delivery</li>
+                            <li>Quote within 1 hour, priority</li>
+                            <li>Experienced certified drivers</li>
+                            <li>Priority dispatch queue</li>
+                            <li>Scheduled delivery windows</li>
+                            <li>GPS/ETA tracking</li>
+                            <li>Multi-drop logistics</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="width:100%;">Get Premium Quote</a>
+                    </div>
+
+                    <!-- Site Contract -->
+                    <div class="plan-card">
+                        <div class="plan-name">Site Contract</div>
+                        <div class="plan-tagline">For long-term & high-volume projects</div>
+                        <div class="plan-price">Custom</div>
+                        <div class="plan-price-note">Negotiated rates for monthly volume</div>
+                        <ul class="plan-features">
+                            <li>All 16+ materials available</li>
+                            <li>Dedicated fleet allocation</li>
+                            <li>Dedicated dispatch coordinator</li>
+                            <li>Weekly delivery cycle planning</li>
+                            <li>Priority dispatch queue</li>
+                            <li>Flexible scheduled windows</li>
+                            <li>GPS/ETA tracking</li>
+                            <li>Multi-drop & multi-site logistics</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-ghost" style="width:100%;">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── CTA Banner ───────────────────────────────────── -->
+        <section class="section section-alt">
+            <div class="container reveal">
+                <div class="cta-banner">
+                    <div class="eyebrow" style="justify-content:center;">Ready to Upgrade?</div>
+                    <h2>Start Your Premium Account</h2>
+                    <p>Contact our dispatch team to set up Premium delivery for your project — same-day setup available.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary">Contact Dispatch</a>
+                        <a href="tel:+919095954562" class="btn btn-outline">Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ─── Footer ───────────────────────────────────────── -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-block">
+                <a href="index.html" class="logo">SK<span>Transport</span></a>
+                <p>Premier building material supplier and logistics specialist in Coimbatore and surrounding districts.
+                </p>
+            </div>
+            <div class="footer-block">
+                <h4>Contact</h4>
+                <a href="tel:+919095954562">+91 90959 54562</a>
+                <a href="mailto:sktransport@gmail.com">sktransport@gmail.com</a>
+            </div>
+            <div class="footer-block">
+                <h4>Pages</h4>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="faq.html">FAQ</a>
+                <a href="premium.html">Premium</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 SK Transport. All rights reserved.</p>
+            <p>Reliability • Heavy-Duty Capability • Speed</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+    <!-- Mobile Drawer -->
+    <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="drawer-header">
+            <a href="index.html" class="logo">SK<span>Transport</span></a>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#x2715;</button>
+        </div>
+        <div class="drawer-body">
+            <ul class="drawer-links">
+                <li><a href="index.html">&#127968; Home</a></li>
+                <li><a href="products.html">&#128230; Products</a></li>
+                <li><a href="about.html">&#127970; About</a></li>
+                <li><a href="reviews.html">&#11088; Reviews</a></li>
+                <li><a href="faq.html">&#10067; FAQ</a></li>
+                <li><a href="contact.html">&#128222; Contact</a></li>
+            </ul>
+            <div class="drawer-cta">
+                <a href="tel:+919095954562" class="btn btn-outline" style="width:100%;justify-content:center;margin:0;">&#128222; 90959 54562</a>
+                <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin:0;">Get Free Quote &#8594;</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

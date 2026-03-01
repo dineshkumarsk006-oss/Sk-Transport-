@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="View full specifications and delivery details for SK Transport building materials in Coimbatore. Lab certified, quality guaranteed.">
+    <title id="metaTitle">Material Detail | SK Transport Coimbatore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress" aria-hidden="true"></div>
+
+    <header id="main-header">
+        <div class="header-row">
+            <a href="index.html" class="logo">SK<span>Transport</span></a>
+            <nav id="nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-ctas">
+                <a href="tel:+919095954562" class="btn-call">📞 90959 54562</a>
+                <a href="contact.html" class="btn btn-primary">Free Quote</a>
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false"><div class="ham-lines"><span></span><span></span><span></span></div></button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top:78px;">
+        <section class="section">
+            <div class="container">
+
+                <!-- Breadcrumb -->
+                <nav aria-label="Breadcrumb"
+                    style="margin-bottom:44px;display:flex;align-items:center;gap:10px;font-size:.84rem;color:var(--t4);">
+                    <a href="index.html" style="color:var(--t4);" onmouseover="this.style.color='var(--amber)'"
+                        onmouseout="this.style.color='var(--t4)'">Home</a>
+                    <span aria-hidden="true">›</span>
+                    <a href="products.html" style="color:var(--t4);" onmouseover="this.style.color='var(--amber)'"
+                        onmouseout="this.style.color='var(--t4)'">Materials</a>
+                    <span aria-hidden="true">›</span>
+                    <span id="breadcrumbName" style="color:var(--t2);">Loading…</span>
+                </nav>
+
+                <!-- Product Grid -->
+                <div class="product-detail-grid reveal">
+
+                    <!-- Image -->
+                    <div>
+                        <div class="main-image" id="mainImageLabel" aria-label="Product image">LOADING</div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;">
+                            <div
+                                style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 18px;">
+                                <div
+                                    style="font-size:.68rem;color:var(--t4);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;">
+                                    Category</div>
+                                <div id="productCategory" style="font-weight:600;color:var(--t1);font-size:.92rem;">—
+                                </div>
+                            </div>
+                            <div
+                                style="background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 18px;">
+                                <div
+                                    style="font-size:.68rem;color:var(--t4);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;">
+                                    Min. Order</div>
+                                <div id="specMinOrderImg" style="font-weight:600;color:var(--t1);font-size:.92rem;">—
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <div>
+                        <span class="badge" id="productCategoryBadge">Material</span>
+
+                        <h1 id="productTitle"
+                            style="margin-top:16px;margin-bottom:16px;font-size:clamp(1.8rem,3.8vw,3rem);">Loading…</h1>
+                        <p id="productDescription"
+                            style="color:var(--t2);font-size:1.04rem;line-height:1.82;margin-bottom:36px;">Loading
+                            product details…</p>
+
+                        <!-- Quantity -->
+                        <div style="margin-bottom:32px;">
+                            <div
+                                style="font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--t4);margin-bottom:10px;">
+                                Quantity</div>
+                            <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+                                <div class="quantity-selector" role="group" aria-label="Quantity selector">
+                                    <button class="quantity-btn" id="minusBtn" aria-label="Decrease quantity">−</button>
+                                    <input type="number" class="quantity-input" id="qtyInput" value="1" min="1"
+                                        aria-label="Quantity">
+                                    <button class="quantity-btn" id="plusBtn" aria-label="Increase quantity">+</button>
+                                </div>
+                                <span style="color:var(--t3);font-size:.88rem;">Units</span>
+                            </div>
+                        </div>
+
+                        <!-- CTAs -->
+                        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px;">
+                            <a href="contact.html" class="btn btn-primary" style="flex:1;min-width:150px;">Request
+                                Delivery</a>
+                            <a href="tel:+919095954562" class="btn btn-outline" style="flex:1;min-width:150px;">📞 Call
+                                to Order</a>
+                        </div>
+
+                        <!-- Trust strip -->
+                        <div
+                            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:8px;">
+                            <div
+                                style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--t3);background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-xs);padding:10px 14px;">
+                                <span>✅</span> Lab Certified
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--t3);background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-xs);padding:10px 14px;">
+                                <span>⏱️</span> On-Time Delivery
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--t3);background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-xs);padding:10px 14px;">
+                                <span>📦</span> Bulk Available
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--t3);background:var(--bg-2);border:1px solid var(--border);border-radius:var(--r-xs);padding:10px 14px;">
+                                <span>🗺️</span> All Coimbatore
+                            </div>
+                        </div>
+
+                        <!-- Specs -->
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-label">Grade / Standard</div>
+                                <div class="spec-value" id="specGrade">—</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Minimum Order</div>
+                                <div class="spec-value" id="specMinOrder">—</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Bulk Density</div>
+                                <div class="spec-value" id="specDensity">—</div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-label">Primary Use</div>
+                                <div class="spec-value" id="specUsage">—</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to catalog -->
+                <div style="margin-top:80px;padding-top:48px;border-top:1px solid var(--border);">
+                    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+                        <div>
+                            <h3 style="margin-bottom:6px;">Need a Different Material?</h3>
+                            <p style="color:var(--t3);font-size:.9rem;">Browse our full catalog of 16+ lab-certified
+                                materials.</p>
+                        </div>
+                        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+                            <a href="products.html" class="btn btn-outline">← Back to Catalog</a>
+                            <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-block">
+                <a href="index.html" class="logo">SK<span>Transport</span></a>
+                <p class="logo-desc">Coimbatore's most trusted building material supplier and logistics specialist.
+                    Serving contractors and builders across the region.</p>
+            </div>
+            <div class="footer-block">
+                <h5>Contact</h5>
+                <a href="tel:+919095954562">+91 90959 54562</a>
+                <a href="mailto:sktransport@gmail.com">sktransport@gmail.com</a>
+            </div>
+            <div class="footer-block">
+                <h5>Pages</h5>
+                <a href="products.html">Materials Catalog</a>
+                <a href="about.html">About Us</a>
+                <a href="reviews.html">Client Reviews</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 SK Transport, Coimbatore. All rights reserved.</p>
+            <p>On-Time · Quality Certified · All Coimbatore</p>
+        </div>
+    </footer>
+
+    
+    <!-- Mobile Bottom Navigation Bar -->
+
+    <script src="script.js"></script>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+    <!-- Mobile Drawer -->
+    <nav class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="drawer-header">
+            <a href="index.html" class="logo">SK<span>Transport</span></a>
+            <button class="drawer-close" id="drawerClose" aria-label="Close menu">&#x2715;</button>
+        </div>
+        <div class="drawer-body">
+            <ul class="drawer-links">
+                <li><a href="index.html">&#127968; Home</a></li>
+                <li><a href="products.html">&#128230; Products</a></li>
+                <li><a href="about.html">&#127970; About</a></li>
+                <li><a href="reviews.html">&#11088; Reviews</a></li>
+                <li><a href="faq.html">&#10067; FAQ</a></li>
+                <li><a href="contact.html">&#128222; Contact</a></li>
+            </ul>
+            <div class="drawer-cta">
+                <a href="tel:+919095954562" class="btn btn-outline" style="width:100%;justify-content:center;margin:0;">&#128222; 90959 54562</a>
+                <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin:0;">Get Free Quote &#8594;</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
